@@ -1,7 +1,7 @@
 const { model, Schema } = require("mongoose");
 
 const notebookSchema = new Schema({
-  body: String,
+  title: String,
   username: String,
   createdAt: String,
   user: {
@@ -11,7 +11,7 @@ const notebookSchema = new Schema({
   notes: [
     {
       body: String,
-      username: String,
+      title: String,
       createdAt: String,
     },
   ],

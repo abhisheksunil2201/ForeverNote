@@ -1,11 +1,18 @@
 const { gql } = require("apollo-server");
 
 module.exports = gql`
-  type Note {
+  type Notebook {
     id: ID!
-    body: String!
+    title: String!
     createdAt: String!
     username: String!
+    notes: [Note]!
+  }
+  type Note {
+    id: ID!
+    title: String!
+    createdAt: String!
+    body: String!
   }
   type User {
     id: ID!
@@ -21,11 +28,15 @@ module.exports = gql`
     email: String!
   }
   type Query {
-    getNotes: [Note]
-    getNote(noteId: ID!): Note
+    getNotebooks(userId: ID!): [Notebook]
+    getNotebook(userId: ID!, title: String!): Notebook
   }
   type Mutation {
     register(registerInput: RegisterInput): User!
     login(username: String!, password: String!): User!
+    createNotebook(title: String!): Notebook!
+    deleteNotebook(notebookId: ID!): String!
+    createNote(notebookId: ID!, title: String!, body: String!): Notebook!
+    deleteNote(notebookId: ID!, noteId: ID!): Notebook!
   }
 `;
