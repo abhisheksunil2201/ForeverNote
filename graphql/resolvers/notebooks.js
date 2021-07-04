@@ -68,4 +68,9 @@ module.exports = {
       }
     },
   },
+  Subscription: {
+    newNotebook: {
+      subscribe: (_, __, { pubsub }) => pubsub.asyncIterator("NEW_NOTEBOOK"),
+    },
+  },
 };

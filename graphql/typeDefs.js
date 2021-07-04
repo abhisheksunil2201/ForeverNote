@@ -39,4 +39,7 @@ module.exports = gql`
     createNote(notebookId: ID!, title: String!, body: String!): Notebook!
     deleteNote(notebookId: ID!, noteId: ID!): Notebook!
   }
+  type Subscription {
+    newNotebook: Notebook!
+  }
 `;

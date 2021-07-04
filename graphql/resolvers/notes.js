@@ -1,3 +1,4 @@
+const { UserInputError } = require("apollo-server");
 const Notebook = require("../../models/Notebook");
 const checkAuth = require("../../utils/check-auth");
 
@@ -25,6 +26,19 @@ module.exports = {
         return notebook;
       } else throw new UserInputError("Notebook not found");
     },
-    deleteNote: async (notebookId, noteId) => {},
+    deleteNote: async (_, { notebookId, noteId }, context) => {
+      const { username } = checkAuth(context);
+
+      const notebook = await Notebook.findById(notebookId);
+
+      if (notebook) {
+        const noteIndex = notebook.notes.findIndex((c) => c.id === noteId);
+        notebook.notes.splice(noteIndex, 1);
+        await notebook.save();
+        return notebook;
+      } else {
+        throw new UserInputError("Notebook not found");
+      }
+    },
   },
 };

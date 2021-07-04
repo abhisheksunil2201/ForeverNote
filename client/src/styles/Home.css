@@ -1,0 +1,48 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.homeNav {
+  display: flex;
+  position: absolute;
+  justify-content: flex-end;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 2rem 10rem 2rem 0;
+  width: 100vw;
+}
+.homeNav > * {
+  padding: 1rem;
+  margin: 0;
+  margin-right: 1.5rem;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.homeNav > *:hover {
+  color: #529ef0;
+}
+.homepageBanner {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  display: block;
+}
+.homepage__text {
+  position: absolute;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 7rem 10rem;
+  border-radius: 20px;
+}
+.homepage__heading {
+  font-size: 60px;
+  line-height: 40%;
+}
+.homepage__para {
+  font-size: 20px;
+  line-height: 0%;
+}

@@ -10,4 +10,7 @@ module.exports = {
     ...notebooksResolvers.Mutation,
     ...notesResolvers.Mutation,
   },
+  Subscription: {
+    ...notebooksResolvers.Subscription,
+  },
 };
