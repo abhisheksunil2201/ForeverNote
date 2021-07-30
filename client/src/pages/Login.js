@@ -53,6 +53,7 @@ function Login() {
             error={errors.username ? true : false}
             value={values.username}
             onChange={onChange}
+            className="formInput"
           />
           <Form.Input
             label="Password"
@@ -68,6 +69,7 @@ function Login() {
                 name={showPassword ? "eye slash" : "eye"}
               />
             }
+            className="formInput"
           />
           <Button type="submit" primary>
             Login

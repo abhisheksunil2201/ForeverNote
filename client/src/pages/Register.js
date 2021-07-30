@@ -54,6 +54,7 @@ function Register() {
             error={errors.username ? true : false}
             value={values.username}
             onChange={onChange}
+            className="formInput"
           />
           <Form.Input
             label="Email"
@@ -63,6 +64,7 @@ function Register() {
             error={errors.email ? true : false}
             value={values.email}
             onChange={onChange}
+            className="formInput"
           />
           <Form.Input
             label="Password"
@@ -78,6 +80,7 @@ function Register() {
                 name={showPassword ? "eye slash" : "eye"}
               />
             }
+            className="formInput"
           />
           <Form.Input
             label="Confirm Password"
@@ -93,6 +96,7 @@ function Register() {
             error={errors.confirmPassword ? true : false}
             value={values.confirmPassword}
             onChange={onChange}
+            className="formInput"
           />
           <Button type="submit" primary>
             Register

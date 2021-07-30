@@ -18,7 +18,7 @@ function HomeNav() {
   ) : (
     <div className="homeNav">
       <Link to="/login">LOGIN</Link>
-      <Link to="/logout">REGISTER</Link>
+      <Link to="/register">REGISTER</Link>
     </div>
   );
 

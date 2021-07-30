@@ -35,9 +35,15 @@ module.exports = gql`
     register(registerInput: RegisterInput): User!
     login(username: String!, password: String!): User!
     createNotebook(title: String!): Notebook!
-    deleteNotebook(notebookId: ID!): String!
+    deleteNotebook(notebookId: ID!): Notebook!
     createNote(notebookId: ID!, title: String!, body: String!): Notebook!
     deleteNote(notebookId: ID!, noteId: ID!): Notebook!
+    editNote(
+      notebookId: ID!
+      noteId: ID!
+      title: String!
+      body: String!
+    ): Notebook!
   }
   type Subscription {
     newNotebook: Notebook!

@@ -14,7 +14,7 @@ import {
   FETCH_NOTEBOOKS_QUERY,
   CREATE_NOTEBOOK_MUTATION,
 } from "../utils/graphql";
-import "../styles/Notebook.css";
+import "../styles/Notebooks.css";
 import NotebookCover from "../components/NotebookCover";
 
 const Notebooks = () => {
@@ -26,6 +26,7 @@ const Notebooks = () => {
     variables: {
       userId: user.id,
     },
+    pollInterval: 2000,
   });
 
   useEffect(() => {

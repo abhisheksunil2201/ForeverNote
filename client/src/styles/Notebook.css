@@ -1,42 +1,73 @@
-.notebooks {
+.notes {
+  padding-top: 10rem;
+  margin-left: 8rem;
+  font-weight: 700;
   display: flex;
-  margin-left: 15rem;
-  padding-top: 15rem;
-  max-width: 100vw;
   flex-wrap: wrap;
 }
-.notebook {
-  height: 300px;
-  min-width: 255px;
-  margin-bottom: 5%;
-  background-size: cover;
-  margin-right: 5rem;
-  border: 1px solid black;
-  border-radius: 0px 20px 20px 0px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-.notebookCover {
-  height: 300px;
-  width: 255px;
-  background-size: cover;
-  margin-right: 5rem;
-  border-radius: 0px 20px 20px 0px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  border: 2px dashed black;
-  text-align: center;
-}
-.notebook:hover {
-  box-shadow: 5px 5px 5px #aaaaaa;
-}
-.notebook__details {
-  background-color: white;
-  width: 100%;
-  padding: 10px;
-  top: 50%;
+.note {
+  border: 2px solid black;
+  width: 22rem;
+  height: 220px;
+  border-radius: 5px 5px 5px 5px/25px 25px 25px 5px;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
   position: relative;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  height: 30%;
+}
+.note__title {
+  border-bottom: 2px solid black;
+  padding: 1.5rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.note__body {
+  word-wrap: break-word;
+  padding: 1.25rem;
+  cursor: pointer;
+}
+.note__create {
+  text-align: center;
+  cursor: pointer;
+}
+.note__create > .icon {
+  margin-top: 30%;
+}
+.quill {
+  height: 200px;
+}
+.titleNote {
+  width: 100% !important;
+  border: 2px solid black;
+}
+.ql-toolbar {
+  border: 2px solid black !important;
+}
+.ql-container {
+  border: 2px solid black !important;
+}
+.note__footer {
+  display: flex;
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  z-index: 1;
+}
+.notes__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 8rem;
+  padding: 0px 8rem;
+}
+.notes__icons {
+  display: flex;
+  align-items: baseline;
+}
+.notes__icons > .icon {
+  cursor: pointer;
+}
+.notes__icons > * {
+  margin-right: 10px;
 }

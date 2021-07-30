@@ -6,7 +6,7 @@
   justify-content: center;
   height: 90vh;
 }
-.ui .input {
+.formInput {
   width: 20rem !important;
 }
 .login .showPassword {

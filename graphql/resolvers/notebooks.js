@@ -62,7 +62,7 @@ module.exports = {
       try {
         const notebook = await Notebook.findById(notebookId);
         await notebook.delete();
-        return "Notebook deleted successfully";
+        return notebook;
       } catch (err) {
         throw new Error(err);
       }
